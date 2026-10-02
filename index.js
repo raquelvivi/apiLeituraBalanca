@@ -9,7 +9,7 @@ app.use(cors());
 const PORT = 9101;
 
 const porta = new SerialPort({
-  path: 'COM4',
+  path: 'COM3',
   baudRate: 115200
 });
 
@@ -17,7 +17,7 @@ let buffer = '';
 let ultimoPeso = 0;
 
 porta.on('open', () => {
-  console.log('Balança conectada na COM4');
+  console.log('Balança conectada na COM3');
 });
 
 porta.on('data', (dados) => {
